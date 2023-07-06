@@ -1,0 +1,167 @@
+Q1. What are the Conditional Operators in Java?
+Conditional Operators are used in making decisions in programming just as we make decisions in real life. 
+It controls the flow of the program and produces outcomes based on the provided conditions. 
+There are three types of Conditional Operators called as Conditional AND, Conditional OR and Ternary Operator. 
+AND Operator
+=> Syntax: &&
+Below is the table representing the output of AND operator depending on the value of expressions:
+expr1	expr2	expr1 && expr2
+T	T	T
+T	F	F
+F	T	F
+F	F	F
+
+OR Operator 
+=> Syntax: ||
+Below is the table representing the output of OR operator depending on the value of expressions:
+
+expr1	expr2	expr1 II expr2
+T	T	T
+T	F	T
+F	T	T
+F	F	F
+
+Ternary Operator
+The word ternary is the amalgamation of three parts. 
+It is so named as it consists of 3 operands. 
+Ternary operator is a condensed form of if-else statement which evaluates a condition and executes the code based on the evaluated condition. 
+Let's get a clear understanding of how a ternary operator is written and used.
+  result = (condition) ? expression1: expression2
+
+Q2.What are the types of operators based on the number of operands ?
+
+Operator in java can be classified into 5 types
+1.Arithmetic Operators
+	
+Operator	Operation
++	Addition
+-	Subtraction
+*	Multiplication
+/	Division
+%	Modulo Operation (Remainder after division)
+
+2.Assignment Operators
+
+Operator	Example	Equivalent to
+=		a = b;	a = b;
++=		a += b;	a = a + b;
+-=		a -= b;	a = a - b;
+*=		a *= b;	a = a * b;
+/=		a /= b;	a = a / b;
+%=		a %= b;	a = a % b;
+3.Relational Operators
+
+Operator Description	Example
+==	Is Equal To	3 == 5 returns false
+!=	Not Equal To	3 != 5 returns true
+>	Greater Than	3 > 5 returns false
+<	Less Than	3 < 5 returns true
+>=	Greater Than or Equal To	3 >= 5 returns false
+<=	Less Than or Equal To	3 <= 5 returns true
+4.Logical Operators
+	is also known as conditional operator which is explain in 1st question.
+5.Unary Operators
+
+Operator Meaning
++	Unary plus: not necessary to use since numbers are positive without using it
+-	Unary minus: inverts the sign of an expression
+++	Increment operator: increments value by 1
+--	Decrement operator: decrements value by 1
+!	Logical complement operator: inverts the value of a boolean
+
+Q3.What is the use of Switch case in Java programming?
+The switch case in java executes one statement from multiple ones. 
+Thus, it is like an if-else-if ladder statement. It works with a lot of data types. 
+The switch statement is used to test the equality of a variable against several values specified in the test cases.
+
+Q4.What are the conditional Statements and use of conditional statements in Java?
+The conditional statement is a branch of code that can be executed depending on another condition. 
+In Java, these clauses are called decision or selection statements.
+
+There are five types of Java conditional statements:-
+
+1. Java If Statement
+	if(Condtion){
+		statement;
+	}
+
+2. Java If-Else Statement
+	if(Condtion){
+		statement;
+	}else{
+		statement1;
+	}
+
+3. Java If-Else-If Ladder Statement
+	if(Condtion){
+		statement;
+	}else if (conditon){
+		statement1;
+	}else{
+		statement2;
+	}
+
+4. Java Nested If Statement
+	if(condition){
+		if(condition){
+			statement;
+		}else
+			statement1;
+	}
+
+5. Java Switch Statement
+	int a ;
+	switch (a)
+	case 1:
+		statement1;
+	case 2:
+		statement2;
+	default
+		statememt3;
+
+In addition we can use break and continue keyword.
+
+Q5.What is the syntax of if else statement?
+ refer quetion 4.
+
+Q6.How do you compare two strings in Java?
+Using String.equals()
+Using String.equalsIgnoreCase()
+string equals() method compares the two given strings based on the data/content of the string. 
+If all the contents of both the strings are same then it returns true. 
+If any character does not match, then it returns false.
+
+
+Q7.What is Mutable String in Java Explain with an example ?
+
+Q8.Write a program to sort a String Alphabetically?
+
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args)
+	{
+		String str;
+		Scanner sc = new Scanner(System.in);
+       System.out.println("Enter the string : ");
+		str = sc.nextLine();
+		int j = 0;
+		char temp = 0;
+		char[] chars = str.toCharArray();
+		for (int i = 0; i < chars.length; i++) {
+				for (j = 0; j < chars.length; j++) {
+						if (chars[j] > chars[i]) {
+								temp = chars[i];
+								chars[i] = chars[j];
+								chars[j] = temp;
+						}
+				}
+		}
+	System.out.println("The sorted string is : ");
+	for (int i = 0; i < chars.length; i++) {
+		System.out.print(chars[i]);
+		}
+
+	}
+}
